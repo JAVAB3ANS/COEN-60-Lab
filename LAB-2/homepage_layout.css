@@ -1,0 +1,131 @@
+body {
+	background-color: white;
+}
+
+h1 {
+	font-family: "helvetica";
+	position: relative;
+	left: 500px;
+}
+
+p {
+	font-family: "helvetica";
+	flex: 33.33%;
+	padding: 5px;
+}
+
+a {
+	font-family: "helvetica";
+}
+
+li {
+	font-family: "helvetica";
+}
+
+.row {
+	display: flex;
+}
+
+div.name {
+	width: 180px;
+}
+
+div.exp {
+	padding: 10px;
+	border: 5px solid green;
+	background: white;
+	flex: 33.33%;
+	max-width: 216px;
+}
+
+div.desc {
+	flex: 33.33%;
+	padding: 5px; 
+}
+
+#desc1 { 
+    border: 5px solid blue;
+	background: #E8FBFB;
+}
+
+#desc1:hover {
+	background: yellow;
+}
+
+div.links {
+	padding: 5px;
+	border: 5px solid blue;
+	background: #E8FBFB;
+	flex: 33.33%;
+	max-width: 216px;
+}
+
+div.favLinks {
+	padding: 5px;
+	border: 5px solid red;
+	flex: 33.33%;
+	background: pink;
+	max-width: 216px; 
+}
+
+div.vid {
+	width: 570px;
+	flex: 33.33%;
+	max-width: 560px;
+}
+
+div.portrait {
+	flex: 33.33%;
+	padding: 5px;
+	max-width: 216px;
+}
+
+.name:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.exp:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.links:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.favLinks:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.desc:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.portrait:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.vid:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.htmlLink:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.fileLink:hover {
+	background: yellow;
+	cursor: pointer;
+}
+
+.bio:hover {
+	background: yellow;
+	cursor: pointer;
+}
