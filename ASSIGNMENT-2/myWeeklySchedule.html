@@ -137,17 +137,13 @@
       </svg>
       <div id="barchart"></div>
       <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-      <script src="https://d3js.org/d3.v4.min.js"></script> 
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://d3js.org/d3.v4.min.js"></script>  
       <script type="text/javascript" src="./barchartScript/HorizontalBarChart.min.js"></script>
       <script type="text/javascript">
          d3.select("body").style("background-color", "#dbf6f3");
          
          var widthOfRect = 0;
-         $(document).ready(function(){
-            var id = "barchart";
-            height = $("#barchart").height();
-            width = $("#barchart").width();
+         $(document).ready(function() {  
             xAxisTicks = 6;
             data = [
                 {
@@ -187,12 +183,8 @@
                     "xAxisValue": 2
                 }
             ];
-
-            chartColor= ["#f1de1d", "#939B0F", "#ffa500", "#9248F5", "#f08282", "#4fA319", "#FBCBE7", "#6de4b2", "#16FCC7"];
-            margin = { "Left": 120, "Right": 10, "Top": 20, "Bottom": 30 };
-            animationDelay = 500;
-            toolTipYPosition = 40;
-            var chart = new HorizontalBarChart({ "id": id, "height": height, "width": width,"xAxisTicks":xAxisTicks,"animationDelay": animationDelay, "data": data, "chartColor": chartColor, "margin":margin, "toolTipYPosition":toolTipYPosition} );
+ 
+            var chart = new HorizontalBarChart({ "id": "barchart", "height": $("#barchart").height(), "width": $("#barchart").width(), "xAxisTicks": 6,"animationDelay": 500, "data": data, "chartColor": ["#f1de1d", "#939B0F", "#ffa500", "#9248F5", "#f08282", "#4fA319", "#FBCBE7", "#6de4b2", "#16FCC7"], "margin": { "Left": 120, "Right": 10, "Top": 20, "Bottom": 30 }, "toolTipYPosition": 40} );
             
             chart.createHorizontalBarChart();
          });
