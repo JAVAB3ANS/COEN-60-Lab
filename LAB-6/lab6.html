@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> COEN 60 - Lab 6 </title>
+        <link rel="shortcut icon" href="https://JAVAB3ANS.github.io/images/logo-pic.jpg" type="image/x-icon">
+    </head>
+    <body>
+        <form name="firstForm" action="#" onsubmit="firstFormRequired()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="Name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="Email"><br>
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="Phone"><br> 
+            <input type="submit" name="submit" value="Signup">
+        </form>
+
+        <br>
+        <p>Which one of the professional sports teams are based in SF area?</p>
+        <form name="secondForm" action="#">
+            <input type="checkbox" id="input1" name="input1" value="49ers">
+            <label for="input1"> 49ers</label><br>
+            <input type="checkbox" id="input2" name="input2" value="Warriors">
+            <label for="input2"> Warriors</label><br>
+            <input type="checkbox" id="input3" name="input3" value="Giants">
+            <label for="input3"> Giants</label><br>
+            <input type="checkbox" id="input4" name="input4" value="Dodgers">
+            <label for="input4"> Dodgers</label><br>
+            <input type="checkbox" id="input5" name="input5" value="A's">
+            <label for="input5"> A's</label><br>
+            <input type="checkbox" id="input6" name="input6" value="Sharks">
+            <label for="input6"> Sharks</label><br>
+            <button onclick="secondFormRequired()">Check correctness</button> 
+        </form>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>  
+        <script type="text/javascript">
+            d3.select("body").style("background-color", "#dbf6f3");
+
+            function firstFormRequired() { 
+                if (document.forms["firstForm"]["name"].value == "" || document.forms["firstForm"]["email"].value == "") {
+                    alert("Please input a value!");
+                    return false;
+                } else if (!document.forms["firstForm"]["email"].value.match(/^[a-zA-Z0-9.]+@scu.edu$/)) {
+                    alert("The email input is illegal format: Please use: [your username]@scu.edu");
+                    return false;
+                }  else {
+                    alert("All information is validated. The form is now complete!");
+                    return true;
+                }
+            }
+
+            function secondFormRequired() {
+                if (document.forms["secondForm"]["input4"].checked == true) {
+                    alert("That is a false option!"); 
+                    return false;
+                } else {
+                    alert("That is partially correct!");
+                    return true;
+                }  
+            }
+        </script>
+    </body>
+</html>
