@@ -17,7 +17,7 @@
 
         <br>
         <p>Which one of the professional sports teams are based in SF area?</p>
-        <form name="secondForm" action="#">
+        <form id="secondForm" action="#">
             <input type="checkbox" id="input1" name="input1" value="49ers">
             <label for="input1"> 49ers</label><br>
             <input type="checkbox" id="input2" name="input2" value="Warriors">
@@ -34,7 +34,7 @@
         </form>
 
         <script src="https://d3js.org/d3.v4.min.js"></script>  
-        <script type="text/javascript">
+        <script type="text/javascript">  
             d3.select("body").style("background-color", "#dbf6f3");
 
             function firstFormRequired() { 
@@ -50,14 +50,16 @@
                 }
             }
 
-            function secondFormRequired() {
-                if (document.forms["secondForm"]["input4"].checked == true) {
-                    alert("That is a false option!"); 
-                    return false;
-                } else {
-                    alert("That is partially correct!");
-                    return true;
-                }  
+            function secondFormRequired() { 
+                if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length ) {
+                    if (document.forms["secondForm"]["input4"].checked == true) {
+                        alert("Incorrect!"); 
+                    } 
+                } else if (document.forms["secondForm"]["input4"].checked == true) {
+                    alert("Incorrect!");
+                } else { 
+                    alert ("Correct!");
+                }
             }
         </script>
     </body>
