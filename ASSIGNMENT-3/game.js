@@ -22,33 +22,33 @@ function play() {
     return choices[randomNumber];
 }
 
-function win(user, computer) {
+function win(yourInput, computerGen) {
     resultDiv.innerHTML = "Win!";
     records.push("Win!");
     userScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    console.log(user);
-    console.log(computer);
+    console.log(yourInput);
+    console.log(computerGen);
 }
 
-function lose(user, computer) {
+function lose(yourInput, computerGen) {
     resultDiv.innerHTML = "Lose!";
     records.push("Lose!");
     computerScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    console.log(user);
-    console.log(computer);
+    console.log(yourInput);
+    console.log(computerGen);
 }
 
-function draw(user, computer) {
+function draw(yourInput, computerGen) {
     resultDiv.innerHTML = "Draw!";
     records.push("Draw!");
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    console.log(user);
-    console.log(computer);
+    console.log(yourInput);
+    console.log(computerGen);
 }
 
 function game(userChoice) {
@@ -73,7 +73,7 @@ function game(userChoice) {
     playCount++;
     playCountDiv.innerHTML = `You've played ${playCount} time(s)!`;
 
-    document.getElementById("records").innerHTML = `<p>Computer chose rock ${computerCount.filter(x => x == "r").length} time(s), paper ${computerCount.filter(x => x == "p").length} time(s), and scissors ${computerCount.filter(x => x == "s").length} time(s)!</p><br>`;
+    document.getElementById("records").innerHTML = `<p>Computer chose rock ${computerCount.filter(x => x == "r").length} time(s), paper ${computerCount.filter(x => x == "p").length} time(s), and scissors ${computerCount.filter(x => x == "s").length} time(s)!</p>`;
     document.getElementById("records").innerHTML += `<p>You lost ${records.filter(x => x == "Lose!").length} time(s), won ${records.filter(x => x == "Win!").length} time(s), and tied ${records.filter(x => x == "Draw!").length} time(s)!</p>`;
 
 }
