@@ -38,7 +38,7 @@
             d3.select("body").style("background-color", "#dbf6f3");
 
             function firstFormRequired() { 
-                if (document.forms["firstForm"]["name"].value == "" || document.forms["firstForm"]["email"].value == "") {
+                if (document.forms["firstForm"]["name"].value == "" || document.forms["firstForm"]["email"].value == "" || document.forms["firstForm"]["phone"]) {
                     alert("Please input a value!");
                     return false;
                 } else if (!document.forms["firstForm"]["email"].value.match(/^[a-zA-Z0-9.]+@scu.edu$/)) {
