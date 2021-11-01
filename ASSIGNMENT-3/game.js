@@ -1,10 +1,10 @@
 let userScore = 0;
 let computerScore = 0;
 let playCount = 0;
-let records = [];
 let computerResults = [];
-let resultHistory = "";
 let computerCount = [];
+let records = [];
+let resultHistory = "";
 
 const userScoreSpan = document.getElementById("userScore");
 const computerScoreSpan = document.getElementById("computerScore");
@@ -22,53 +22,31 @@ function play() {
     return choices[randomNumber];
 }
 
-function win(yourInput, computerGen) {
-    resultDiv.innerHTML = "Win!";
-    records.push("Win!");
-    userScore++;
-    userScoreSpan.innerHTML = userScore;
-    computerScoreSpan.innerHTML = computerScore;
+function compare(yourInput, computerGen) {
     console.log(yourInput);
     console.log(computerGen);
-}
+    
+    computerCount.push(play());
 
-function lose(yourInput, computerGen) {
-    resultDiv.innerHTML = "Lose!";
-    records.push("Lose!");
-    computerScore++;
-    userScoreSpan.innerHTML = userScore;
-    computerScoreSpan.innerHTML = computerScore;
-    console.log(yourInput);
-    console.log(computerGen);
-}
-
-function draw(yourInput, computerGen) {
-    resultDiv.innerHTML = "Draw!";
-    records.push("Draw!");
-    userScoreSpan.innerHTML = userScore;
-    computerScoreSpan.innerHTML = computerScore;
-    console.log(yourInput);
-    console.log(computerGen);
-}
-
-function game(userChoice) {
-    switch (userChoice + play()) {
-        case "rs": case "pr": case "sp":
-            win(userChoice, play());
-            computerCount.push(play());
+    switch (yourInput + play()) {
+        case "rs": case "pr": case "sp":  
             resultHistoryDiv.innerHTML += "Win! ";
+            records.push("Win!");
+            userScore++;
             break;
-        case "rp": case "ps": case "sr":
-            lose(userChoice, play());
-            computerCount.push(play());
+        case "rp": case "ps": case "sr":  
             resultHistoryDiv.innerHTML += "Lose! ";
+            records.push("Lose!");
+            computerScore++;
             break;
-        case "rr": case "pp": case "ss":
-            draw(userChoice, play());
-            computerCount.push(play());
+        case "rr": case "pp": case "ss": 
             resultHistoryDiv.innerHTML += "Draw! ";
+            records.push("Draw!");
             break;
     }
+
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
 
     playCount++;
     playCountDiv.innerHTML = `You've played ${playCount} time(s)!`;
@@ -80,15 +58,15 @@ function game(userChoice) {
 
 function main() {
     rockDiv.addEventListener("click", function() {
-        game("r");
+        compare("r", play());
     })
 
     paperDiv.addEventListener("click", function() {
-        game("p");
+        compare("p", play());
     })
 
     scissorsDiv.addEventListener("click", function() {
-        game("s")
+        compare("s", play());
     })
 }
 
