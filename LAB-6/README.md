@@ -23,9 +23,17 @@
 </p>
 
 <p align="center">
-    <img src="https://media.discordapp.net/attachments/892901673322815511/903899577357307934/unknown.png">
+    <img src="https://media.discordapp.net/attachments/892901673322815511/904865655306735626/unknown.png">
 </p>
 
 <p align="center">
-    <img src="https://media.discordapp.net/attachments/892901673322815511/903899601319362570/unknown.png">
+    <img src="https://media.discordapp.net/attachments/892901673322815511/903899525788368916/unknown.png">
+</p>
+
+<p align="center">
+    <img src="https://media.discordapp.net/attachments/892901673322815511/904865496380350464/unknown.png">
+</p>
+
+<p align="center">
+    <img src="https://media.discordapp.net/attachments/892901673322815511/904865393150156850/unknown.png">
 </p>
