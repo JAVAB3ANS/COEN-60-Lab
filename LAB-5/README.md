@@ -1,5 +1,7 @@
 # LAB 5
 
+- [Live Demo Here!](https://webpages.scu.edu/ftp/jvu/lab5/squares_lab.html)
+
 1) Add Square.
 
 <p align="center">

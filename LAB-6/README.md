@@ -1,5 +1,7 @@
 # Lab 6
 
+- [Live Demo Here!](https://webpages.scu.edu/ftp/jvu/lab6/lab6.html)
+
 ## First Form Validation 
 
 <p align="center">
