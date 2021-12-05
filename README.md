@@ -1,2 +1,5 @@
 # COEN-60-Lab
-Source code for COEN 60: Introduction to Web Technologies Lab
+
+<p>
+    <img src="https://iformatlogic.com/photo/plugin/article/2020/1579502994_1-org.jpg" width="500">
+</p> 
